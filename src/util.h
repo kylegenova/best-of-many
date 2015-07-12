@@ -1,0 +1,94 @@
+#ifndef UTIL_H
+#define UTIL_H
+
+#include "definitions.h"
+
+double sum(const vector<double> &l);
+double lMax(const vector<double> &l);
+double sum(const vector<int> &l);
+vector<double> elementWiseSum(const vector<double> &a, const vector<double> &b);
+double wSum(const vector<int> &l, const vector<double> &weights);
+double wSum(const vector<double> &l, const vector<double> &weights);
+void output(const vector<int> &l);
+int cG(int v, const vector<SplitEdge> &g);
+int cG(const vector<pair<int, int>> &cList);
+int cG(const vector<SplitEdge> &g, const vector<int> &X);
+int delta(const vector<SplitEdge> &g, int v);
+int minCG(const vector<SplitEdge> &g, const AList &aList, int s = -1);
+vector<SplitEdge> inducedSubgraph(const vector<SplitEdge> &g, const vector<int> &V);
+bool equals(SplitEdge e1, SplitEdge e2);
+bool isMem(SplitEdge what, const vector<SplitEdge> &of);
+vector<SplitEdge> setRemove(const vector<SplitEdge> &what, const vector<SplitEdge> &from);
+vector<SplitEdge> setUnion(const vector<SplitEdge> &s1, const vector<SplitEdge> &s2);
+bool isMem(int what, const vector<int> &of);
+vector<int> setUnion(const vector<int> &s1, const vector<int> &s2);
+vector<int> setIntersection(const vector<int> &s1, const vector<int> &s2);
+vector<SplitEdge> deleteEdge(const vector<SplitEdge> &g, SplitEdge e);
+vector<SplitEdge> combineVertices(const vector<SplitEdge> &g, int v, int w);
+vector<int> setRemove(vector<int> what, vector<int> from);
+int cG(int from, int to, const vector<SplitEdge> &g);
+int cG(int s, const vector<int> &X, const vector<SplitEdge> &g);
+vector<int> neighbors(const vector<SplitEdge> &g, int v);
+bool connects(SplitEdge e, int first, int second);
+void output(const vector<long long int> &l);
+long long int gcd(long long int a, long long int b);
+long long int gcd(vector<long long int> &l);
+void outputDif(const vector<SplitEdge> &g, const vector<SplitEdge> &h, int s = -1);
+void output(vector<vector<int>> ll);
+vector<SplitEdge> removeZeroWeighted(const vector<SplitEdge> &in);
+vector<SplitEdge> slice(const vector<SplitEdge> &in, int from, int to);
+int magnitude(const vector<SplitEdge> &g);
+vector<SplitEdge> mergeWeights(const vector<SplitEdge> &g, const vector<SplitEdge> &h);
+int indexOfEdge(const vector<SplitEdge> &in, int from, int to);
+bool isSubset(const vector<SplitEdge> &what, const vector<SplitEdge> &of);
+int getNumUsedNodes(const vector<SplitEdge> &in);
+int getMaxNodeInd(const vector<SplitEdge> &in);
+vector<bool> getUsedNodes(const vector<SplitEdge> &in);
+vector<vector<int>> sortByCG(const vector<SplitEdge> &g, int s, const vector<vector<int>> &X1);
+bool isSubset(const vector<int> &subset, const vector<int> &set);
+bool isProperSubset(const vector<int> &subset, const vector<int> &set);
+bool setsEqual(const vector<int> &s1, const vector<int> &s2);
+bool vectorsIdentical(const vector<int> &l, const vector<int> &l2);
+void verifyEquation4(const vector<SplitEdge> &g, int s);
+vector<int> getUsedNodesSet(const vector<SplitEdge> &in);
+vector<SplitEdge> modToSplit(const vector<ModEdge> &in);
+void output(const vector<SplitEdge> &l);
+vector<SplitEdge> fixEquation4(const vector<SplitEdge> &g, int s);
+vector<SplitEdge> compress(const vector<SplitEdge> &g);
+bool verifyMAOrdering(const vector<SplitEdge> &g, const vector<int> &ma);
+void output(const vector<bool> &in);
+vector<LPEdge> treesUnion(const vector<vector<Edge>> &ts);
+void treeError(const vector<LPEdge> &lp, const vector<LPEdge> &tu);
+int locInTree(const vector<LPEdge> &t, LPEdge e);
+SplitEdge edgeToSplitEdge(Edge e);
+vector<SplitEdge> edgeToSplitEdge(const vector<Edge> &t);
+SplitEdge joinEdgeToSplitEdge(JoinEdge e);
+vector<SplitEdge> joinEdgeToSplitEdge(const vector<JoinEdge> &t);
+vector<int> dijkstra(const vector<SplitEdge> &t, int s);
+vector<int> dijkstra(const vector<Edge> &t, int s);
+vector<int> dijkstra(const vector<JoinEdge> &t, int s);
+vector<vector<LPEdge>> eToLP(const vector<vector<Edge>> &ts);
+vector<Edge> lpToE(const vector<LPEdge> &t);
+/// Split [str] by [delim] and return as a vector of the resultant substrings.
+vector<string> splitString(string str, char delim);
+vector<LPEdge> genTest();
+void weightGraph(vector<ModEdge> &g, vector<double> &ws);
+int getNumNodes(const vector<ModEdge> &g);
+int isMem(const vector<ModEdge> &g, ModEdge e);
+vector<ModEdge> lpToMod(const vector<LPEdge> &in);
+vector<Edge> lpToEdge(const vector<LPEdge> &in);
+vector<ModEdge> contractEdge(const vector<ModEdge> &g, ModEdge e);
+vector<ModEdge> contractEdgeNew(const vector<ModEdge> &g, ModEdge e);
+vector<ModEdge> contractLastEdge(const vector<ModEdge> &g);
+vector<ModEdge> xToZ(const vector<ModEdge> &x);
+vector<ModEdge> adjustGraph(const vector<ModEdge> &lGraph, const vector<int> &cNodes);
+vector<ModEdge> cleanGraph(const vector<ModEdge> &g);
+bool should(double pr);
+void output(vector<ModEdge> l);
+void output(vector<LPEdge> l);
+void output(vector<double> l);
+bool stringIsWhitespace(string str);
+string getFileWithoutDirectory(string fName);
+string getDirectoryOfPath(string path);
+
+#endif

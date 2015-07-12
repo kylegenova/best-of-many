@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "best-of-many", "best-of-many\best-of-many.vcxproj", "{3D49CD17-3C9B-4BAD-A59F-CF6C4592DC69}"
+	ProjectSection(ProjectDependencies) = postProject
+		{42D1D246-08CD-466C-B892-394816ABC210} = {42D1D246-08CD-466C-B892-394816ABC210}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blossom-V", "..\dependencies\blossomV\blossom-V.vcxproj", "{42D1D246-08CD-466C-B892-394816ABC210}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D49CD17-3C9B-4BAD-A59F-CF6C4592DC69}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3D49CD17-3C9B-4BAD-A59F-CF6C4592DC69}.Debug|Win32.Build.0 = Debug|Win32
+		{3D49CD17-3C9B-4BAD-A59F-CF6C4592DC69}.Release|Win32.ActiveCfg = Release|Win32
+		{3D49CD17-3C9B-4BAD-A59F-CF6C4592DC69}.Release|Win32.Build.0 = Release|Win32
+		{42D1D246-08CD-466C-B892-394816ABC210}.Debug|Win32.ActiveCfg = Debug|Win32
+		{42D1D246-08CD-466C-B892-394816ABC210}.Debug|Win32.Build.0 = Debug|Win32
+		{42D1D246-08CD-466C-B892-394816ABC210}.Release|Win32.ActiveCfg = Release|Win32
+		{42D1D246-08CD-466C-B892-394816ABC210}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+Debug/
+Release/
+best-of-many/Debug/
+best-of-many/Release/
+ipch/
+Debug/
+Release/
+*.vspx
+*.psess

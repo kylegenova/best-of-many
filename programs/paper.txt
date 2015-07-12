@@ -1,0 +1,128 @@
+CHRISTOFIDES:TRUE
+MAX_ENTROPY:TRUE
+COLUMN_GENERATION:TRUE
+EDGE_SPLITTING:TRUE
+SWAPROUND:TRUE
+SAMPLE_COUNT:1000
+CG_EPSILON:0.1
+CG_HISTORY_SIZE:100
+SAVE_PLOTS:FALSE
+SAVE_SPREADSHEET:TRUE
+SAVE_LOG_FILES:FALSE
+INSTANCES:
+../instances/rat575.tsp 6773
+../instances/p654.tsp 34643
+../instances/u724.tsp 41910
+../instances/d657.tsp 48912
+../instances/p654.tsp 34643
+../instances/rat783.tsp 8806
+../instances/pr1002.tsp 259045
+../instances/u1060.tsp 224094
+../instances/vm1084.tsp 239297
+../instances/pcb1173.tsp 56892
+../instances/d1291.tsp 50801
+../instances/rl1304.tsp 252948
+../instances/rl1323.tsp 270199
+../instances/fl1400.tsp 20127
+../instances/fl417.tsp 11861
+../instances/u1432.tsp 152970
+../instances/fl1577.tsp 22249
+../instances/nrw1379.tsp 56638
+../instances/u1817.tsp 57201
+../instances/d1655.tsp 62128
+../instances/berlin52.tsp 7542
+../instances/ch130.tsp 6110
+../instances/ch150.tsp 6528
+../instances/d198.tsp 15780
+../instances/pcb442.tsp 50778
+../instances/tsp225.tsp 3916
+../instances/u159.tsp 42080
+../instances/u574.tsp 36905
+../instances/d493.tsp 35002
+../instances/bier127.tsp 118282
+../instances/eil51.tsp 426
+../instances/eil76.tsp 538
+../instances/eil101.tsp 629
+../instances/gil262.tsp 2378
+../instances/kroA100.tsp 21282
+../instances/kroA150.tsp 26524
+../instances/kroA200.tsp 29368
+../instances/kroB100.tsp 22141
+../instances/kroB150.tsp 26130
+../instances/kroB200.tsp 29437
+../instances/kroC100.tsp 20749
+../instances/kroD100.tsp 21294
+../instances/kroE100.tsp 22068
+../instances/lin105.tsp 14379
+../instances/pr76.tsp 108159
+../instances/pr107.tsp 44303
+../instances/pr124.tsp 59030
+../instances/pr136.tsp 96772
+../instances/pr144.tsp 58537
+../instances/pr152.tsp 73682
+../instances/pr226.tsp 80369
+../instances/pr264.tsp 49135
+../instances/pr299.tsp 48191
+../instances/pr439.tsp 107217
+../instances/rat99.tsp 1211
+../instances/rat195.tsp 2323
+../instances/st70.tsp 675
+../instances/ts225.tsp 126643
+../instances/xqf131.tsp 564
+../instances/xqg237.tsp 1019
+../instances/pma343.tsp 1368
+../instances/pka379.tsp 1332
+../instances/bcl380.tsp 1621
+../instances/pbl395.tsp 1281
+../instances/pbk411.tsp 1343
+../instances/pbn423.tsp 1365
+../instances/pbm436.tsp 1443
+../instances/d2103.tsp 80450
+../instances/xql662.tsp 2513
+../instances/rbx711.tsp 3115
+../instances/rbu737.tsp 3314
+../instances/dkg813.tsp 3199
+../instances/lim963.tsp 2789
+../instances/pbd984.tsp 2797
+../instances/xit1083.tsp 3558
+../instances/dka1376.tsp 4666
+../instances/dca1389.tsp 5085
+../instances/dja1436.tsp 5257
+../instances/icw1483.tsp 4416
+../instances/fra1488.tsp 4264
+../instances/rbv1583.tsp 5387
+../instances/fnb1615.tsp 4956
+../instances/djc1785.tsp 6115
+../instances/dcc1911.tsp 6396
+../instances/dkd1973.tsp 6421
+../instances/djb2036.tsp 6197
+../instances/dcb2086.tsp 6600
+../instances/bva2144.tsp 6304
+../instances/xqc2175.tsp 6830
+../instances/bck2217.tsp 6764
+# These instances are unweighted; they came from the KONECT graph library.
+# The files on that site are TSV files, rather than TSP files. However, if you
+# run best-of-many on a TSV file, it will generate the corresponding TSP file
+# from the largest connected component.
+../instances/ucidata-zachary.tsp 44
+../instances/opsahlSouthernwomen.tsp 19
+../instances/contiguousUsa.tsp 51
+../instances/adjnounAdjacency.tsp 123
+../instances/dolphins.tsp 71
+../instances/maayanFoodweb.tsp 215
+../instances/maayan-pdzbaseMCC.tsp 271
+../instances/subelj_euroroadMCC.tsp 1415
+../instances/maayan-StelzlMCC.tsp 2686
+../instances/si175.tsp 21407
+../instances/si535.tsp 48450
+../instances/si1032.tsp 92650
+../instances/gr120.tsp 6942
+../instances/pa561.tsp 2763
+../instances/xpr2308.tsp 7219
+../instances/ley2323.tsp 8352
+../instances/rbw2481.tsp 7724
+../instances/pds2566.tsp 7643
+../instances/mlt2597.tsp 8071
+../instances/irw2802.tsp 8423
+../instances/dbj2924.tsp 10128
+../instances/dlb3694.tsp 10959
