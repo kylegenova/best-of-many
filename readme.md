@@ -34,7 +34,7 @@ Now, you may open the file `<repository root>\windows\best-of-many.sln` in Visua
 Usage
 -------
 ##### Basic Usage
-The most basic way to run Best-of-Many is by passing it the paths to one or more TSPLIB files, each followed by their optimal cost (for the purpose of error calculation). It will run Christofides', Column Generation, Edge-Splitting, Maximum Entropy, and SwapRound on the trees from both Column Generation and Edge-Splitting, outputting the results as a CSV file. It will also save all the result and log files. Example:
+The most basic way to run Best-of-Many is by passing it the paths to one or more TSPLIB files, each followed by their optimal cost (for the purpose of error calculation). It will run Christofides', Column Generation, Splitting Off, Maximum Entropy, and SwapRound on the trees from both Column Generation and Splitting Off, outputting the results as a CSV file. It will also save all the result and log files. Example:
 
 `best-of-many afile.tsp 7 ../anotherfile.tsp 31 ../path/to/athirdfile.tsp 127`
 
@@ -51,11 +51,11 @@ For more complex operations, Best-of-Many runs "program" files, which are instru
 # Whitespace is okay too.
 
 # The first five lines determine if the corresponding algorithms will be run.
-# SWAPROUND applies to both Column Generation and Edge-Splitting.
+# SWAPROUND applies to both Column Generation and Splitting Off.
 CHRISTOFIDES:TRUE
 MAX_ENTROPY:TRUE
 COLUMN_GENERATION:TRUE
-EDGE_SPLITTING:TRUE
+SPLITTING_OFF:TRUE
 SWAPROUND:TRUE
 # Any value other than TRUE will be considered FALSE.
 # When one of the above lines is ommitted, the variable defaults to TRUE.

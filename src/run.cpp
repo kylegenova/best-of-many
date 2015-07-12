@@ -51,7 +51,7 @@ bool programArguments::parseProgram(string programFilePath)
 		{
 			USE_CG = option[1] == "TRUE";
 		}
-		else if (option[0] == "EDGE_SPLITTING")
+		else if (option[0] == "SPLITTING_OFF")
 		{
 			USE_ES = option[1] == "TRUE";
 		}
