@@ -33,7 +33,7 @@ changeLineInFile('../dependencies/blossomV/GEOM/GPMinterface.cpp',
 changeLineInFile('../dependencies/blossomV/GEOM/GeomPerfectMatching.h',
     'private:', '')
 
-# Tell blossomV that we have install Triangle
+# Tell blossomV that we have installed Triangle
 changeLineInFile('../dependencies/blossomV/GEOM/GeomPerfectMatching.h',
     '//#define DELAUNAY_TRIANGLE', '#define DELAUNAY_TRIANGLE')
 
@@ -48,6 +48,6 @@ changeLineInFile('../dependencies/blossomV/GEOM/GPMinit.cpp',
 changeLineInFile('../dependencies/blossomV/triangle/triangle.c',
     '/* #define NO_TIMER */', '#define NO_TIMER')
 
-# Some unused blossomV features generate a fopen warning; just remove it
+# Some unused blossomV features generate an fopen warning; just remove it
 changeLineInFile('../dependencies/blossomV/PMinterface.cpp', '#include <stdio.h>',
     '#define _CRT_SECURE_NO_WARNINGS\n#include <stdio.h>')

@@ -3,7 +3,7 @@ An Implementation of the Best-of-Many Christofides' Algorithm for the Traveling 
 
 Description
 ------------
-This project contains the implementations of the algorithms described in [this paper][arXiv], which compile into a single executable called Best-of-Many. The procedures available are Christofides', Column Generation, Max Entropy Sampling, Splitting Off and Tree Packing, Column Generation + SwapRound, and Splitting Off and Tree Packing + SwapRound.  The executable supports .tsp and .tsv formatted files for input, with a few exceptions (i.e. files supplying custom distance functions). Inputs may also be supplied as a 'program file', specifying a subset of the procedures on a set of files; Best-of-Many will generate a .csv spreadsheet and text files with the results. The executable can also be used in conjunction with the provided Python scripts to generate plots of the performance of the algorithms over time. Right now only a Windows version is available, but I'm working on adding \*nix support.
+This project contains the implementations of the algorithms described in [this paper][arXiv], which compile into a single executable called Best-of-Many. The procedures available are Christofides', Column Generation, Max Entropy Sampling, Splitting Off and Tree Packing, Column Generation + SwapRound, and Splitting Off and Tree Packing + SwapRound.  The executable supports .tsp and .tsv formatted files for input, with a few exceptions (i.e. files supplying custom distance functions). Inputs may also be supplied as a 'program file', specifying a subset of the procedures on a set of files; Best-of-Many will generate a .csv spreadsheet and text files with the results. The executable can also be used in conjunction with the provided Python scripts to generate plots of the performance of the algorithms over time. Right now only a Windows version is available.
 
 
 [arXiv]:http://arxiv.org/abs/1506.07776
@@ -12,7 +12,7 @@ This project contains the implementations of the algorithms described in [this p
 Dependencies and Installation:
 ------------------------------
 
-After checking out the code on this repository, install the following dependencies on a Windows machine:
+After checking out the code on this repository, install the following dependencies on your machine:
 + [Cygwin][cyg] 32bit (the minimum set of packages is fine; only the core is a depended upon). After installing, you must add `<cygwin directory>\bin` (which is `C:\cygwin\bin` by default) to either your user or system Path environment variable (with a semicolon separator from the rest of the path). This is required so that Concorde has access to Cygwin. After adding the reference to your environment variables and before using best-of-many, you must unfortunately restart your computer so that the change is propogated to system services.
 + [Visual Studio 2013 Express][vs] (or higher). This is used to compile Best-of-Many as well as the dependencies provided as source files.
 + [Gurobi 5.6.3, 32-Bit][gur]. Gurobi is a fast LP solver used only in the Column Generation procedures. Install the program to the default `C:\gurobi563\` directory. Make sure to install a valid license before proceeding further (instructions are available on Gurobi's site). Free licenses for research purposes are available. If you can't get a license for some reason, you can install Gurobi anyway- the Column Generation functions won't work (and you'll have to follow the Usage section guidelines on how not to run it), but the rest of the program should compile and run without issue.
@@ -22,7 +22,7 @@ After checking out the code on this repository, install the following dependenci
 [gur]: http://www.gurobi.com/downloads/download-center
 
 Next, download the following zips/archives:
-+ The [Concorde TSP-Solver][cc] command-line executabl. Select the 'windows-cygwin' version.
++ The [Concorde TSP-Solver][cc] command-line executable. Select the 'windows-cygwin' version.
 + Kolmogorov's [blossomV][bV] code for computing minimum perfect matchings.
 + [Triangle][tri], a library for generating exact delaunay triangulations. It is used both by blossomV and by Best-of-Many.
 + [Eigen][eig], a Linear Algebra Library.
@@ -32,11 +32,11 @@ Next, download the following zips/archives:
 [tri]: http://www.cs.cmu.edu/~quake/triangle.html
 [eig]: http://eigen.tuxfamily.org/index.php?title=Main_Page
 
-Fully unzip all four of the archives that were just downloaded. Name the *4 folders* as follows: `eigen\`, `blossomV\`, `delaunay\` and `concorde.exe\` (Each folder should contain item(s) other than just another folder in its immediate subdirectory). Run the [Python 2.x][py] script `installer.py`, which is also located in `installation\`. If you get any errors, just delete the directory `dependencies\`, which the script creates, and try again after making the necessary changes.
+Fully unzip all four of the archives that were just downloaded. Name the 4 folders as follows: `eigen\`, `blossomV\`, `delaunay\` and `concorde.exe\` (Each extracted folder should contain item(s) other than just another folder in its immediate subdirectory). Run the [Python 2.x][py] script `installer.py`, which is also located in `installation\`. If you get any errors, just delete the directory `dependencies\`, which the script creates, and try again after making the necessary changes.
 
 [py]: https://www.python.org/downloads/
 
-Now, you may open the file `<repository root>\windows\best-of-many.sln` in Visual Studio and build it in Release or Debug mode, generating best-of-many.exe. An important final requirement is that the directory in which Best-of-Many is run also contains `concorde.exe`; this executable is currently located in the directory `dependencies\` (which is created by `installer.py`).
+Now, you may open the file `<repository root>\windows\best-of-many.sln` in Visual Studio and build it in Release or Debug mode, generating best-of-many.exe. An important final requirement is that the directory in which Best-of-Many is located also contains `concorde.exe`; this executable is currently located in the directory `dependencies\` (which is created by `installer.py`).
 
 
 Usage
@@ -93,7 +93,7 @@ SAVE_SPREADSHEET:TRUE
 SAVE_LOG_FILES:FALSE
 
 # This is the instances section. Every instance must be accompanied by the
-# optimal tour cost.*
+# optimal tour cost.
 # If the optimal isn't known the dependency concorde.exe can calculate it.
 # Alternatively, just supply a value of 1; the error% statistics in the
 # spreadsheet will be off, but the algorithms will run normally.
@@ -109,5 +109,3 @@ INSTANCES:
 # When running Best-of-Many, use a Unix-style relative path for the
 # location of the program file as well.
 ```
-
-\*Disclaimer: I understand the irony of requiring the optimal solution as part of the input to the program.
