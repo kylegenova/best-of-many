@@ -1,3 +1,9 @@
+# Project-Specific Folders
+dependencies/
+installation/
+!installation/installer.py
+!installation/blossom-V.vcxproj
+
 # TSP
 *.sol
 
