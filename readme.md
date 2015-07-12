@@ -1,20 +1,28 @@
 An Implementation of the Best-of-Many Christofides' Algorithm for the Traveling Salesman Problem
 =======================================
 
+Description
+------------
+This project contains the implementations of the algorithms described in [this paper][arXiv], which compile into a single executable called Best-of-Many. The procedures available are Christofides', Column Generation, Max Entropy Sampling, Splitting Off and Tree Packing, Column Generation + SwapRound, and Splitting Off and Tree Packing + SwapRound.  The executable supports .tsp and .tsv formatted files for input, with a few exceptions (i.e. files supplying custom distance functions). Inputs may also be supplied as a 'program file', specifying a subset of the procedures on a set of files; Best-of-Many will generate a .csv spreadsheet and text files with the results. The executable can also be used in conjunction with the provided Python scripts to generate plots of the performance of the algorithms over time. Right now only a Windows version is available, but I'm working on adding \*nix support.
+
+
+[arXiv]:http://arxiv.org/abs/1506.07776
+
+
 Dependencies and Installation:
 ------------------------------
 
-Once you have checked out the code on this repository, install the following dependencies on your Windows machine:
+After checking out the code on this repository, install the following dependencies on a Windows machine:
 + [Cygwin][cyg] 32bit (the minimum set of packages is fine; only the core is a depended upon). After installing, you must add `<cygwin directory>\bin` (which is `C:\cygwin\bin` by default) to either your user or system Path environment variable (with a semicolon separator from the rest of the path). This is required so that Concorde has access to Cygwin. After adding the reference to your environment variables and before using best-of-many, you must unfortunately restart your computer so that the change is propogated to system services.
 + [Visual Studio 2013 Express][vs] (or higher). This is used to compile Best-of-Many as well as the dependencies provided as source files.
-+ [Gurobi 5.6.3, 32-Bit][gur]. Gurobi is a fast LP solver used exclusively in the column generation procedures. Install the program to the default `C:\gurobi563\` directory. Make sure to install a valid license before proceeding further (instructions are available on Gurobi's site). Free licenses for research purposes are available. If you can't get a license for some reason, install Gurobi anyway- the Column Generation method won't work (and you'll have to follow the Usage section guidelines on how not to run it), but the rest of the program should compile and run without issue.
++ [Gurobi 5.6.3, 32-Bit][gur]. Gurobi is a fast LP solver used only in the Column Generation procedures. Install the program to the default `C:\gurobi563\` directory. Make sure to install a valid license before proceeding further (instructions are available on Gurobi's site). Free licenses for research purposes are available. If you can't get a license for some reason, you can install Gurobi anyway- the Column Generation functions won't work (and you'll have to follow the Usage section guidelines on how not to run it), but the rest of the program should compile and run without issue.
 
 [cyg]: https://www.cygwin.com/
 [vs]: https://www.visualstudio.com/en-us/products/free-developer-offers-vs.aspx
 [gur]: http://www.gurobi.com/downloads/download-center
 
 Next, download the following zips/archives:
-+ The [Concorde TSP-Solver][cc] command-line executable (get the 'windows-cygwin') version:
++ The [Concorde TSP-Solver][cc] command-line executabl. Select the 'windows-cygwin' version.
 + Kolmogorov's [blossomV][bV] code for computing minimum perfect matchings.
 + [Triangle][tri], a library for generating exact delaunay triangulations. It is used both by blossomV and by Best-of-Many.
 + [Eigen][eig], a Linear Algebra Library.
@@ -39,7 +47,7 @@ The most basic way to run Best-of-Many is by passing it the paths to one or more
 `best-of-many afile.tsp 7 ../anotherfile.tsp 31 ../path/to/athirdfile.tsp 127`
 
 ##### Programs
-For more complex operations, Best-of-Many runs "program" files, which are instruction sets for instances and algorithms to run on them. A program which reruns the experiments exactly (excepting improvements to best-of-many since that date) from our paper is provided in `best-of-many\programs`. If you want this to program run, you must get the [TSPLIB][lib], [VSLI][circ], and [KONECT][unw] instances they reference, and extract them all to `best-of-many\instances`. Below is an example program file:
+For more complex operations, Best-of-Many runs "program" files, which are instruction sets for instances and algorithms to run on them. A program which reruns the experiments (excepting improvements to Best-of-Many since that date) from our paper is provided in `best-of-many\programs`. If you want this to program run, you must get the [TSPLIB][lib], [VSLI][circ], and [KONECT][unw] instances they reference, and extract them all to `best-of-many\instances`. Below is an example program file:
 [lib]: http://www.iwr.uni-heidelberg.de/groups/comopt/software/TSPLIB95/tsp/
 [circ]:http://www.math.uwaterloo.ca/tsp/vlsi/
 [unw]:http://konect.uni-koblenz.de/
