@@ -1,11 +1,14 @@
 # Project-Specific Folders
 dependencies/
 installation/
+instances/
 !installation/installer.py
 !installation/blossom-V.vcxproj
 
 # TSP
 *.sol
+*.tsp
+*.tsv
 
 # Compiled Object files
 *.slo
