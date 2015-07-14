@@ -3,7 +3,9 @@ An Implementation of the Best-of-Many Christofides' Algorithm for the Traveling 
 
 Description
 ------------
-This project contains the implementations of the algorithms described in [this paper][arXiv], which compile into a single executable called Best-of-Many. The procedures available are Christofides', Column Generation, Max Entropy Sampling, Splitting Off and Tree Packing, Column Generation + SwapRound, and Splitting Off and Tree Packing + SwapRound.  The executable supports .tsp and .tsv formatted files for input, with a few exceptions (i.e. files supplying custom distance functions). Inputs may also be supplied as a 'program file', specifying a subset of the procedures on a set of files; Best-of-Many will generate a .csv spreadsheet and text files with the results. The executable can also be used in conjunction with the provided Python scripts to generate plots of the performance of the algorithms over time. Right now only a Windows version is available.
+This project contains the implementations of the algorithms described in [this paper][arXiv], which compile into a single executable called Best-of-Many. The procedures available are Christofides', Column Generation, Max Entropy Sampling, Splitting Off and Tree Packing, Column Generation + SwapRound, and Splitting Off and Tree Packing + SwapRound.  
+
+The executable supports .tsp and .tsv formatted files for input, with a few exceptions (i.e. files supplying custom distance functions). 'Program file' inputs specifying a subset of the procedures on a set of files are also supported, with .csv spreadsheet output. Finally, the executable can be used in conjunction with the provided Python scripts to generate plots of the performance of the algorithms over time. Right now only a Windows version is available.
 
 
 [arXiv]:http://arxiv.org/abs/1506.07776
