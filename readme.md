@@ -14,8 +14,8 @@ Dependencies and Installation:
 
 After checking out the code on this repository, install the following dependencies on your machine:
 + [Cygwin][cyg] 32bit (the minimum set of packages is fine; only the core is a depended upon). After installing, you must add `<cygwin directory>\bin` (which is `C:\cygwin\bin` by default) to either your user or system Path environment variable (with a semicolon separator from the rest of the path). This is required so that Concorde has access to Cygwin. After adding the reference to your environment variables and before using best-of-many, you must unfortunately restart your computer so that the change is propogated to system services.
-+ [Visual Studio 2013 Express][vs] (or higher). This is used to compile Best-of-Many as well as the dependencies provided as source files.
-+ [Gurobi 5.6.3, 32-Bit][gur]. Gurobi is a fast LP solver used only in the Column Generation procedures. Install the program to the default `C:\gurobi563\` directory. Make sure to install a valid license before proceeding further (instructions are available on Gurobi's site). Free licenses for research purposes are available. If you can't get a license for some reason, you can install Gurobi anyway- the Column Generation functions won't work (and you'll have to follow the Usage section guidelines on how not to run it), but the rest of the program should compile and run without issue.
++ [Visual Studio][vs] (Express 2013 or higher). This is used to compile Best-of-Many as well as the dependencies provided as source files.
++ [Gurobi Optimizer 5.6.3, 32-Bit][gur]. Gurobi is a fast LP solver used only in the Column Generation procedures. Install the program to the default `C:\gurobi563\` directory. Make sure to install a valid license before proceeding further (instructions are available on Gurobi's site). Free licenses for research purposes are available. If you can't get a license for some reason, you can install Gurobi anyway- the Column Generation functions won't work (and you'll have to follow the Usage section guidelines on how not to run it), but the rest of the program should compile and run without issue.
 
 [cyg]: https://www.cygwin.com/
 [vs]: https://www.visualstudio.com/en-us/products/free-developer-offers-vs.aspx
@@ -32,11 +32,11 @@ Next, download the following zips/archives:
 [tri]: http://www.cs.cmu.edu/~quake/triangle.html
 [eig]: http://eigen.tuxfamily.org/index.php?title=Main_Page
 
-Fully unzip all four of the archives that were just downloaded. Name the 4 folders as follows: `eigen\`, `blossomV\`, `delaunay\` and `concorde.exe\` (Each extracted folder should contain item(s) other than just another folder in its immediate subdirectory). Run the [Python 2.x][py] script `installer.py`, which is also located in `installation\`. If you get any errors, just delete the directory `dependencies\`, which the script creates, and try again after making the necessary changes.
+Fully unzip all four of the archives that were just downloaded. Name the 4 folders as follows: `eigen\`, `blossomV\`, `delaunay\` and `concorde.exe\` (Each extracted folder should contain item(s) other than just another folder in its immediate subdirectory). Place the four folders inside `installation\`.Run the [Python 2.x][py] script `installer.py`, which is also located in `installation\`. If you get any errors, just delete the directory `dependencies\`, which the script creates, and try again after making the necessary changes.
 
 [py]: https://www.python.org/downloads/
 
-Now, you may open the file `<repository root>\windows\best-of-many.sln` in Visual Studio and build it in Release or Debug mode, generating best-of-many.exe. An important final requirement is that the directory in which Best-of-Many is located also contains `concorde.exe`; this executable is currently located in the directory `dependencies\` (which is created by `installer.py`).
+Now, you may open the file `<repository root>\windows\best-of-many.sln` in Visual Studio and build it in Release or Debug mode, generating best-of-many.exe.  An important final requirement is that the directory in which Best-of-Many is located also contains `concorde.exe`; this executable is currently located in the directory `dependencies\` (which is created by `installer.py`).
 
 
 Usage
