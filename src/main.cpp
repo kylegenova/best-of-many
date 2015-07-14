@@ -14,6 +14,7 @@
 /* All Windows specific definitions */
 #ifdef _WIN32
 #include <Windows.h>
+#include <sys/stat.h>
 unsigned long long startClock()
 {
 
@@ -86,6 +87,14 @@ int HANGOUT_TIME_SEC = 0; // Just a placeholder for consistent function declarat
 
 int main(int argc, char* argv[])
 {
+	// First check for concorde.exe:
+	struct stat concordeBuffer;
+	if (stat("concorde.exe", &concordeBuffer))
+	{
+		cout << "Error: concorde.exe was not detected (or is not accessible)." << endl;
+		cout << "Please add it to the working directory for best-of-many.exe." << endl;
+		exit(1);
+	}
 	if (argc == 1)
 	{
 		cout << "Error: No input detected." << endl;
